@@ -1,6 +1,7 @@
 (function() {
   try {
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2x4coluUhgpzVQCZgXyOLAmeSC0_EMrTKwgYNPVNjOXrB-QfEumvpo4gPVqm_YtlQEw/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2x4coluUhgpzVQCZgXyOLAmeSC0_EMrTKwgYNPVNjOXrB-QfEumvpo4gPVqm_YtlQEw/exec';
     const STATUS = document.getElementById('statusMessage');
 const fileInput = document.getElementById('fileInput');
 const loadButton = document.getElementById('loadButton');
