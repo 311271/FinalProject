@@ -219,7 +219,7 @@ async function recordWordClick(word, pronunciation, translation) {
     params.append('pronunciation', pronunciation);
     params.append('translation', translation);
     const response = await fetch(SCRIPT_URL, {
-      //method: 'POST',
+      method: 'POST',
       //body: params
        method: 'POST',
     mode: 'no-cors',
