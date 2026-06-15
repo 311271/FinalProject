@@ -1,7 +1,6 @@
 (function() {
   try {
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2x4coluUhgpzVQCZgXyOLAmeSC0_EMrTKwgYNPVNjOXrB-QfEumvpo4gPVqm_YtlQEw/exec';
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2x4coluUhgpzVQCZgXyOLAmeSC0_EMrTKwgYNPVNjOXrB-QfEumvpo4gPVqm_YtlQEw/exec';
     const STATUS = document.getElementById('statusMessage');
 const fileInput = document.getElementById('fileInput');
 const loadButton = document.getElementById('loadButton');
@@ -220,8 +219,14 @@ async function recordWordClick(word, pronunciation, translation) {
     params.append('pronunciation', pronunciation);
     params.append('translation', translation);
     const response = await fetch(SCRIPT_URL, {
-      method: 'POST',
-      body: params
+      //method: 'POST',
+      //body: params
+       method: 'POST',
+    mode: 'no-cors',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
     });
     const data = await response.json();
     if (data.status !== 'ok') {
